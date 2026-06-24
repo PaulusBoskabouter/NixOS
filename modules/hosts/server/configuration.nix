@@ -34,13 +34,6 @@
     LC_TIME = "nl_NL.UTF-8";
   };
 
-   services.desktopManager.plasma6.enable = true;
-
-  # Configure keymap in X11
-  # services.xserver.xkb = {
-  #   layout = "us";
-  #   variant = "euro";
-  # };
 
    
   nix.settings.experimental-features = ["nix-command" "flakes"];
