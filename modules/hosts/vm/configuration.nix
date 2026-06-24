@@ -62,18 +62,11 @@
   # Enable touchpad support (enabled default in most desktopManager).
     services.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users."NOTSJAAK" = {
-		isNormalUser = true;
-		description = "IMPOSTER";
-		extraGroups = [ "networkmanager" "wheel" ];
-		hashedPasswordFile = config.age.secrets.oefen.path;
-	};
-  users.users."sjaak" = {
-    isNormalUser = true;
-    description = "sjaak";
-    extraGroups = [ "networkmanager" "wheel" ];
-  };
+	 users.users."sjaak" = {
+	   isNormalUser = true;
+	   description = "sjaak";
+	   extraGroups = [ "networkmanager" "wheel" ];
+	 };
    
   nix.settings.experimental-features = ["nix-command" "flakes"];
 

@@ -3,12 +3,8 @@
 		environment.systemPackages = with pkgs; [
 			git
 		];
-	#};
-
-
 
 	# settings
-	#perSystem = { pkgs, ... }: {
 	programs.git = {
 	    enable = true;
 	    config = {

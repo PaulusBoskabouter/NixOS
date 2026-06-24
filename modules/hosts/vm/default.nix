@@ -8,6 +8,8 @@
 			self.nixosModules.basePackages
 			self.nixosModules.gitSetup
 			self.nixosModules.vmConfiguration
+			self.nixosModules.baseUser
+
 			# Self-hosting stuff
 			self.nixosModules.mayGarageContainer
 			self.nixosModules.actualContainer

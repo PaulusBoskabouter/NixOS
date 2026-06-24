@@ -7,7 +7,7 @@ let
 in {
 
 
-	"oefen.age".publicKeys = [ vmkey machinekey ];
+	"pwdPaul.age".publicKeys = [ vmkey machinekey ];
 
 	"tailscaleKey.age".publicKeys = [ vmkey machinekey ];
 

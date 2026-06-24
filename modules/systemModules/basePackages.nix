@@ -6,7 +6,8 @@
 			vim
 			wget
 			neovim
-			inputs.agenix.packages.${pkgs.system}.default
+			# inputs.agenix.packages.${pkgs.system}.default
+			bat
 		];
 	};
 
