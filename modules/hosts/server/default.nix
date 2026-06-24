@@ -9,7 +9,7 @@
 			# Base packages
 			self.nixosModules.basePackages
 			self.nixosModules.gitSetup
-			self.nixosModules.vmConfiguration
+			self.nixosModules.serverConfiguration
 
 			# User
 			self.nixosModules.smurfUser
