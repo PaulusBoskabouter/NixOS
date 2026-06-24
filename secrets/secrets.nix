@@ -15,6 +15,5 @@ in {
 	"mayGarageConfig.age".publicKeys = [ vmkey machinekey serverkey];
 
 
-	"actualBudgetKey.age".publicKeys = [vmkey machinekey serverkey];
 	"actualTSKey.age".publicKeys = [vmkey machinekey serverkey];
 }
