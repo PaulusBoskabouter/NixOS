@@ -4,7 +4,7 @@
 		modules = [
 			# Encryption using agenix
 			inputs.agenix.nixosModules.default
-			self.nixosModules.secrets
+			self.nixosModules.serverSecrets
 
 			# Base packages
 			self.nixosModules.basePackages
