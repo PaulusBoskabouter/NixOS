@@ -1,7 +1,7 @@
 { self, inputs, ... }: {
-	flake.nixosModules.serverConfiguration={ pkgs, lib, ...}: {
+	flake.nixosModules.vmConfiguration={ pkgs, lib, config, ...}: {
   imports = [
-      self.nixosModules.serverHardware
+      self.nixosModules.vmHardware
     ];
 
   # Bootloader.
@@ -9,14 +9,15 @@
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
-  networking.hostName = "terra"; # Define your hostname.
+  networking.hostName = "testding"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Enable networking
   networking.networkmanager.enable = true;
-
   # Set your time zone.
   time.timeZone = "Europe/Amsterdam";
+
+  environment.variables.EDITOR = "nvim";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -34,11 +35,11 @@
   };
 
   # Enable the X11 windowing system.
-  # services.xserver.enable = true;
+   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  # services.displayManager.sddm.enable = true;
-  # services.desktopManager.plasma6.enable = true;
+   services.displayManager.sddm.enable = true;
+   services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
   # services.xserver.xkb = {
@@ -61,18 +62,18 @@
   # Enable touchpad support (enabled default in most desktopManager).
     services.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users."sjaak" = {
-    isNormalUser = true;
-    description = "sjaak";
-    extraGroups = [ "networkmanager" "wheel" ];
-  };
+	 users.users."sjaak" = {
+	   isNormalUser = true;
+	   description = "sjaak";
+	   extraGroups = [ "networkmanager" "wheel" ];
+	 };
    
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
+	
+  programs.firefox.enable = true;
 
   # List services that you want to enable:
 

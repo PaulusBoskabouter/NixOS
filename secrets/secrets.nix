@@ -6,8 +6,8 @@ let
 
 in {
 
-
-	"pwdPaul.age".publicKeys = [ vmkey machinekey ];
+	"passwdPaul.age".publicKeys = [ vmkey machinekey ];
+	"passwdSmurf.age".publicKeys = [ vmkey machinekey ];
 
 	"tailscaleKey.age".publicKeys = [ vmkey machinekey ];
 

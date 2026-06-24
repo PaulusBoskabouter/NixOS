@@ -1,9 +1,20 @@
 { self, inputs, ... }: {
 
-	flake.nixosConfigurations.server = inputs.nixpkgs.lib.nixosSystem {
+	flake.nixosConfigurations.vm = inputs.nixpkgs.lib.nixosSystem {
 		modules = [
-			self.nixosModules.serverConfiguration
+			# Encryption using agenix
+			inputs.agenix.nixosModules.default
+			self.nixosModules.secrets
 			self.nixosModules.basePackages
+			self.nixosModules.gitSetup
+			self.nixosModules.vmConfiguration
+			self.nixosModules.baseUser
+
+			# Self-hosting stuff
+			self.nixosModules.mayGarageContainer
+			self.nixosModules.actualContainer
+			self.nixosModules.tailscaleServer
+
 		];
 	};
 }

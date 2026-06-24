@@ -4,7 +4,7 @@
 				isNormalUser = true;
 				description = "Paul";
 				extraGroups = [ "networkmanager" "wheel" ];
-				hashedPasswordFile = config.age.secrets.pwdPaul.path;
+				hashedPasswordFile = config.age.secrets.passwdPaul.path;
 				};
 	};
 }

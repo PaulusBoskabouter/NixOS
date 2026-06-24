@@ -2,7 +2,7 @@
 # and may be overwritten by future invocations.  Please make changes
 # to /etc/nixos/configuration.nix instead.
 { self, inputs, ...}: {
-flake.nixosModules.serverHardware = { config, lib, pkgs, modulesPath, ... }:
+flake.nixosModules.vmHardware = { config, lib, pkgs, modulesPath, ... }:
 
 {
   imports = [ ];

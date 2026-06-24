@@ -8,7 +8,6 @@
 	    url = "github:nix-community/home-manager";
 	    inputs.nixpkgs.follows = "nixpkgs";
     };
-    #wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
 
     # Encryption stuff
     agenix.url = "github:ryantm/agenix";
