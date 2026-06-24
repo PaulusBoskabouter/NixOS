@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-        flake.nixosModules.baseUser={ pkgs, lib, config, ...}: {
+        flake.nixosModules.paulUser={ pkgs, lib, config, ...}: {
 		users.users."paul" = {
 				isNormalUser = true;
 				description = "Paul";
