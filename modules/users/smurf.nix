@@ -4,7 +4,7 @@
 				isNormalUser = true;
 				description = "Smurf";
 				extraGroups = [ "networkmanager" "wheel" ];
-				hashedPasswordFile = config.age.secrets.psswdSmurf.path;
+				hashedPasswordFile = config.age.secrets.passwdSmurf.path;
 				};
 	};
 }
