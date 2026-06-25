@@ -7,6 +7,7 @@
 			self.nixosModules.vmSecrets
 			self.nixosModules.basePackages
 			self.nixosModules.gitSetup
+			self.nixosModules.neovimSetup
 			self.nixosModules.vmConfiguration
 
 			# User

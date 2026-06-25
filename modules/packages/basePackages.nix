@@ -5,7 +5,7 @@
 			btop
 			vim
 			wget
-			neovim
+			# neovim
 			inputs.agenix.packages.${pkgs.system}.default
 			bat
 			openssl
