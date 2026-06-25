@@ -1,23 +1,35 @@
 {
 	inputs = {
+        # Nix version
 		nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 		nixpkgs_stable.url = "github:nixos/nixpkgs/release-26.05";
+        
+        # Dendritic thingies
 		flake-parts.url = "github:hercules-ci/flake-parts";
 		import-tree.url = "github:vic/import-tree";
-		home-manager = {
-		    url = "github:nix-community/home-manager";
-		    inputs.nixpkgs.follows = "nixpkgs";
-		};
 
 		# Encryption stuff
 		agenix.url = "github:ryantm/agenix";
 		agenix.inputs.nixpkgs.follows = "nixpkgs";
 
 
-		# nvim
+        # Home and KDE managing
+		home-manager = {
+		    url = "github:nix-community/home-manager";
+		    inputs.nixpkgs.follows = "nixpkgs";
+		};
+
+        plasma-manager = {
+            url = "github:nix-community/plasma-manager";
+            inputs.nixpkgs.follows = "nixpkgs";
+            inputs.home-manager.follows = "home-manager";
+        };
+
+
+		# nvim config
 		nixvim = {
 			url = "github:nix-community/nixvim";
-			inputs.nixpkgs.follows = "nixpkgs";
+			# inputs.nixpkgs.follows = "nixpkgs";
 		};
 	};
 

@@ -10,9 +10,10 @@
 			self.nixosModules.neovimSetup
 			self.nixosModules.vmConfiguration
 
-			# User
+			# User-specific
 			self.nixosModules.homeManagerSetup
 			self.nixosModules.paulUser
+            self.nixosModules.plasmaBase
 			
 			# Self-hosting stuff
 #			self.nixosModules.mayGarageContainer

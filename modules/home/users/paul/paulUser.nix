@@ -1,6 +1,5 @@
 { self, inputs, ... }: {
 	flake.nixosModules.paulUser = { pkgs, config, ... }: {
-		programs.zsh.enable = true;
 		users.users."paul" = {
 			isNormalUser = true;
 			description = "Paul";
@@ -8,6 +7,7 @@
 			hashedPasswordFile = config.age.secrets.passwdPaul.path;
 			shell = pkgs.zsh;
 		};
+		programs.zsh.enable = true;
 		home-manager.users.paul.imports = [ self.homeModules.paulHome ];
 	};
 }
