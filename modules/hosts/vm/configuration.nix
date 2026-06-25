@@ -60,16 +60,11 @@
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
-    services.libinput.enable = true;
+  services.libinput.enable = true;
 
-	 users.users."sjaak" = {
-	   isNormalUser = true;
-	   description = "sjaak";
-	   extraGroups = [ "networkmanager" "wheel" ];
-	 };
    
   nix.settings.experimental-features = ["nix-command" "flakes"];
-
+	
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 	

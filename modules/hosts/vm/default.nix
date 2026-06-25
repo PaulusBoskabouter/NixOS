@@ -4,12 +4,15 @@
 		modules = [
 			# Encryption using agenix
 			inputs.agenix.nixosModules.default
-			self.nixosModules.secrets
+			self.nixosModules.vmSecrets
 			self.nixosModules.basePackages
 			self.nixosModules.gitSetup
 			self.nixosModules.vmConfiguration
-			self.nixosModules.paulUser
 
+			# User
+			self.nixosModules.homeManagerSetup
+			self.nixosModules.paulUser
+			
 			# Self-hosting stuff
 #			self.nixosModules.mayGarageContainer
 	#		self.nixosModules.actualContainer

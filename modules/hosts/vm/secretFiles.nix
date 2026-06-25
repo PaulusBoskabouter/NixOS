@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-	flake.nixosModules.secrets = { config, ... }: {
+	flake.nixosModules.vmSecrets = { config, ... }: {
 		age.secrets = {
 			# oefen = {file = "${self}/secrets/oefen.age";};
 			passwdPaul.file = "${self}/secrets/passwdPaul.age";
