@@ -19,6 +19,10 @@
 			self.nixosModules.actualContainer
 			self.nixosModules.tailscaleServer
 
+			# Backup system
+			self.nixosModules.backupDisk
+			self.nixosModules.backupSystem
+
 		];
 	};
 }

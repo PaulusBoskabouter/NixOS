@@ -9,11 +9,10 @@ in {
 	"passwdPaul.age".publicKeys = [ vmkey machinekey ];
 	"passwdSmurf.age".publicKeys = [ vmkey machinekey serverkey];
 
+	# Hosting-related
 	"tailscaleKey.age".publicKeys = [ vmkey machinekey serverkey];
-
-	"mayGarageTSKey.age".publicKeys = [ vmkey machinekey serverkey];
 	"mayGarageConfig.age".publicKeys = [ vmkey machinekey serverkey];
-
-
+	"mayGarageTSKey.age".publicKeys = [ vmkey machinekey serverkey];
 	"actualTSKey.age".publicKeys = [vmkey machinekey serverkey];
+	"passwdRestic.age".publicKeys = [serverkey];
 }
