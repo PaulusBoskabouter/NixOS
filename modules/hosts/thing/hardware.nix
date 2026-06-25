@@ -1,5 +1,5 @@
 { self, inputs, ...}: {
-	flake.nixosModules.serverHardware = { config, lib, pkgs, modulesPath, ... }:
+	flake.nixosModules.thingHardware = { config, lib, pkgs, modulesPath, ... }:
 	{
 
 

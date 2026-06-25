@@ -1,7 +1,7 @@
 { self, inputs, ... }: {
-	flake.nixosModules.serverConfiguration={ pkgs, lib, config, ...}: {
+	flake.nixosModules.thingConfiguration={ pkgs, lib, config, ...}: {
   imports = [
-      self.nixosModules.serverHardware
+      self.nixosModules.thingHardware
     ];
 
   # Bootloader.

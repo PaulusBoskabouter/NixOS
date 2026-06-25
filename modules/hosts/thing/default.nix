@@ -1,15 +1,18 @@
 { self, inputs, ... }: {
 
-	flake.nixosConfigurations.server = inputs.nixpkgs.lib.nixosSystem {
+	flake.nixosConfigurations.thing = inputs.nixpkgs.lib.nixosSystem {
 		modules = [
+            # Machine-specific
+			self.nixosModules.thingConfiguration
+			self.nixosModules.thingSecrets
+
+
 			# Encryption using agenix
 			inputs.agenix.nixosModules.default
-			self.nixosModules.serverSecrets
 
 			# Base packages
 			self.nixosModules.basePackages
 			self.nixosModules.gitSetup
-			self.nixosModules.serverConfiguration
 
 			# User
 			self.nixosModules.smurfUser

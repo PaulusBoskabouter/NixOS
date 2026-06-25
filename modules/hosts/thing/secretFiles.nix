@@ -1,8 +1,6 @@
 { self, inputs, ... }: {
-	flake.nixosModules.serverSecrets = { config, ... }: {
+	flake.nixosModules.thingSecrets = { config, ... }: {
 		age.secrets = {
-			# oefen = {file = "${self}/secrets/oefen.age";};
-			# passwdPaul.file = "${self}/secrets/passwdPaul.age";
 			passwdSmurf.file = "${self}/secrets/passwdSmurf.age";
 			tailscaleKey.file = "${self}/secrets/tailscaleKey.age";
 			mayGarageConfig.file = "${self}/secrets/mayGarageConfig.age";

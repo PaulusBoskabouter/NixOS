@@ -1,14 +1,16 @@
 { self, inputs, ... }: {
 
-	flake.nixosConfigurations.vm = inputs.nixpkgs.lib.nixosSystem {
+	flake.nixosConfigurations.calypso = inputs.nixpkgs.lib.nixosSystem {
 		modules = [
+            # Machine-specific
+			self.nixosModules.calypsoConfiguration
+			self.nixosModules.calypsoSecrets
+
 			# Encryption using agenix
 			inputs.agenix.nixosModules.default
-			self.nixosModules.vmSecrets
 			self.nixosModules.basePackages
 			self.nixosModules.gitSetup
 			self.nixosModules.neovimSetup
-			self.nixosModules.vmConfiguration
 
 			# User-specific
 			self.nixosModules.homeManagerSetup

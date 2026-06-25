@@ -1,7 +1,7 @@
 { self, inputs, ... }: {
-	flake.nixosModules.vmConfiguration={ pkgs, lib, config, ...}: {
+	flake.nixosModules.calypsoConfiguration={ pkgs, lib, config, ...}: {
   imports = [
-      self.nixosModules.vmHardware
+      self.nixosModules.calypsoHardware
     ];
 
   # Bootloader.
@@ -9,15 +9,13 @@
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
-  networking.hostName = "testding"; # Define your hostname.
+  networking.hostName = "calypso"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Enable networking
   networking.networkmanager.enable = true;
   # Set your time zone.
   time.timeZone = "Europe/Amsterdam";
-
-  environment.variables.EDITOR = "nvim";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -37,15 +35,12 @@
   # Enable the X11 windowing system.
    services.xserver.enable = true;
 
-  # Enable the KDE Plasma Desktop Environment.
-   # services.displayManager.sddm.enable = true;
-   # services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
-  # services.xserver.xkb = {
-  #   layout = "us";
-  #   variant = "euro";
-  # };
+  services.xserver.xkb = {
+    layout = "us";
+    variant = "euro";
+  };
 
   services.printing.enable = true;
 
@@ -68,18 +63,12 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 	
-  programs.firefox.enable = true;
-
-  # List services that you want to enable:
-
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
