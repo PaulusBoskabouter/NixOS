@@ -15,6 +15,7 @@
 			self.nixosModules.gitSetup
 
 			# User
+			self.nixosModules.homeManagerSetup
 			self.nixosModules.smurfUser
 
 			# Self-hosting stuff
