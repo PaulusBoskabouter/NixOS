@@ -13,6 +13,7 @@
 			# Base packages
 			self.nixosModules.basePackages
 			self.nixosModules.gitSetup
+			self.nixosModules.neovimSetup
 
 			# User
 			self.nixosModules.homeManagerSetup
