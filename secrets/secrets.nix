@@ -1,5 +1,5 @@
 let
-	calypsokey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP9goVCP7hVvnltNQ6QONPbqzJGGKbiHBmQ5sIfC7FmV sjaak@testding";
+	calypsokey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINfPMglUFTF9V71YpoobEqPxxLrnTDAAref9Avjz0FkR root@nixos";
 	serverkey= "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKsuaOpRKRDCKPhxnU36t85PcvuTWpnTlsjdnvLQyluG root@nixos";
 
 
