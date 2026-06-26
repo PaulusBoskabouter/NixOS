@@ -9,7 +9,7 @@ in {
 	"passwdSmurf.age".publicKeys = [ serverkey ];
 
 	# Hosting-related
-	"tailscaleKey.age".publicKeys = [ serverkey ];
+	"tailscaleKey.age".publicKeys = [ serverkey calypsokey ];
 	"mayGarageConfig.age".publicKeys = [ serverkey ];
 	"mayGarageTSKey.age".publicKeys = [ serverkey ];
 	"actualTSKey.age".publicKeys = [ serverkey ];

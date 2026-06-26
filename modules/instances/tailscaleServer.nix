@@ -25,19 +25,5 @@
 			'';
 		};
 
-		# Declaratively expose Actual over the tailnet, so it's reproducible
-		# from the flake rather than a manual `tailscale serve` command
-		# systemd.services.tailscale-serve-actual = {
-		# 	description = "Configure tailscale serve for Actual Budget";
-		# 	after = [ "tailscale-autoconnect.service" ];
-		# 	wants = [ "tailscale-autoconnect.service" ];
-		# 	wantedBy = [ "multi-user.target" ];
-		# 	serviceConfig.Type = "oneshot";
-		# 	script = ''
-		# 		${pkgs.tailscale}/bin/tailscale serve reset
-		# 		${pkgs.tailscale}/bin/tailscale serve --bg --set-path=/actual http://127.0.0.1:5006;
-		# 		${pkgs.tailscale}/bin/tailscale serve --bg --set-path=/garage http://127.0.0.1:5050;
-		# 	'';
-		# };
 	};
 }
