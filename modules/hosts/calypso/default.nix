@@ -18,6 +18,7 @@
 			#Base packages
 			self.nixosModules.gitSetup
 			self.nixosModules.neovimSetup
+			self.nixosModules.steamApp
 			
 		];
 	};

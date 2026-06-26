@@ -6,7 +6,33 @@ flake.nixosModules.calypsoHardware = { config, lib, pkgs, modulesPath, ... }:
 
 {
 
-    # entry 
+  imports =
+    [ (modulesPath + "/installer/scan/not-detected.nix")
+    ];
+
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" ];
+  boot.initrd.kernelModules = [ ];
+  boot.kernelModules = [ "kvm-amd" ];
+  boot.extraModulePackages = [ ];
+
+  fileSystems."/" =
+    { device = "/dev/mapper/luks-1d2f847a-307b-40df-8723-53262615d8cf";
+      fsType = "ext4";
+    };
+
+  boot.initrd.luks.devices."luks-1d2f847a-307b-40df-8723-53262615d8cf".device = "/dev/disk/by-uuid/1d2f847a-307b-40df-8723-53262615d8cf";
+
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-uuid/A07B-4A6F";
+      fsType = "vfat";
+      options = [ "fmask=0077" "dmask=0077" ];
+    };
+
+  swapDevices = [ ];
+
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+
 };
 
 }
