@@ -5,13 +5,13 @@ let
 
 in {
 
-	"passwdPaul.age".publicKeys = [ calypsokey ];
-	"passwdSmurf.age".publicKeys = [ serverkey ];
+	"passwdPaul.age".publicKeys      = [ calypsokey ];
+	"passwdSmurf.age".publicKeys     = [ calypsokey serverkey ];
 
 	# Hosting-related
-	"tailscaleKey.age".publicKeys = [ serverkey calypsokey ];
-	"mayGarageConfig.age".publicKeys = [ serverkey ];
-	"mayGarageTSKey.age".publicKeys = [ serverkey ];
-	"actualTSKey.age".publicKeys = [ serverkey ];
-	"passwdRestic.age".publicKeys = [ serverkey ];
+	"tailscaleKey.age".publicKeys    = [ calypsokey serverkey ];
+	"mayGarageConfig.age".publicKeys = [ calypsokey serverkey ];
+	"mayGarageTSKey.age".publicKeys  = [ calypsokey serverkey ];
+	"actualTSKey.age".publicKeys     = [ calypsokey serverkey ];
+	"passwdRestic.age".publicKeys    = [ calypsokey serverkey ];
 }
