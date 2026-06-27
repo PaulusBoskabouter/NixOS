@@ -16,6 +16,7 @@
 			self.nixosModules.plasmaBase
 
 			#Base packages
+			self.nixosModules.unstableOverlay # For grabbing unstable releases
 			self.nixosModules.gitSetup
 			self.nixosModules.neovimSetup
 			self.nixosModules.steamApp

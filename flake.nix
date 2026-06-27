@@ -1,8 +1,8 @@
 {
 	inputs = {
         # Nix version
-		nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-		nixpkgs_stable.url = "github:nixos/nixpkgs/release-26.05";
+        nixpkgs.url = "github:nixos/nixpkgs/release-26.05";
+		nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
         
         # Dendritic thingies
 		flake-parts.url = "github:hercules-ci/flake-parts";
@@ -29,7 +29,7 @@
 		# nvim config
 		nixvim = {
 			url = "github:nix-community/nixvim";
-			# inputs.nixpkgs.follows = "nixpkgs";
+			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
     zen-browser = {

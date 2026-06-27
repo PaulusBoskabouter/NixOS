@@ -1,7 +1,7 @@
 { self, inputs, ... }: {
 	flake.homeModules.standardApps = { pkgs, ... }: {
 		home.packages = [
-			pkgs.signal-desktop
+			pkgs.unstable.signal-desktop
 			pkgs.spotify
 			pkgs.discord
 		];
