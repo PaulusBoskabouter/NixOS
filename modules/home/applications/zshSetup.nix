@@ -18,5 +18,10 @@
 				save = 10000;
 			};
 		};
+        
+        # We define aliases here
+        home.shellAliases = {
+            ssh = "kitty +kitten ssh";
+        };
 	};
 }
