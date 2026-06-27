@@ -6,6 +6,7 @@
 			self.homeModules.plasmaConfig
 
             # Actual applications
+            self.homeModules.standardApps
 			self.homeModules.zedApp
 			self.homeModules.zenBrowser
 
