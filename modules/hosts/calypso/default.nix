@@ -5,6 +5,7 @@
 			# Machine-specific
 			self.nixosModules.calypsoConfiguration
 			self.nixosModules.calypsoSecrets
+			self.nixosModules.extraDisks
 
 			# Encryption using agenix
 			inputs.agenix.nixosModules.default
