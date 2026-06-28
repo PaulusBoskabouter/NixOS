@@ -6,6 +6,7 @@
 			self.nixosModules.calypsoConfiguration
 			self.nixosModules.calypsoSecrets
 			self.nixosModules.extraDisks
+			self.nixosModules.nvidiaSetup
 
 			# Encryption using agenix
 			inputs.agenix.nixosModules.default
