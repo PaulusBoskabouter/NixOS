@@ -19,23 +19,22 @@
 		    inputs.nixpkgs.follows = "nixpkgs";
 		};
 
-    plasma-manager = {
-        url = "github:nix-community/plasma-manager";
-        inputs.nixpkgs.follows = "nixpkgs";
-        inputs.home-manager.follows = "home-manager";
-    };
+        plasma-manager = {
+            url = "github:nix-community/plasma-manager";
+            inputs.nixpkgs.follows = "nixpkgs";
+            inputs.home-manager.follows = "home-manager";
+        };
 
 
 		# nvim config
 		nixvim = {
 			url = "github:nix-community/nixvim";
-			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
-    zen-browser = {
-      url = "github:youwen5/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+        zen-browser = {
+          url = "github:youwen5/zen-browser-flake";
+          inputs.nixpkgs.follows = "nixpkgs";
+        };
 	};
 
 

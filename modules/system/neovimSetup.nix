@@ -7,6 +7,8 @@
 			defaultEditor = true;
 			viAlias = true;
 			vimAlias = true;
+            version.enableNixpkgsReleaseCheck = false;
+            nixpkgs.pkgs = pkgs;
 
 			colorschemes.catppuccin = {
 				enable = true;
