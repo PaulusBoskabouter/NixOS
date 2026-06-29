@@ -23,6 +23,7 @@
 			self.nixosModules.neovimSetup
 			self.nixosModules.steamApp
 			self.nixosModules.tailscaleServer
+			self.nixosModules.devToolkit
 			
 		];
 	};

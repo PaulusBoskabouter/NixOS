@@ -4,6 +4,7 @@
 			pkgs.unstable.signal-desktop
 			pkgs.spotify
 			pkgs.discord
+            pkgs.vlc
 		];
 	};
 }
