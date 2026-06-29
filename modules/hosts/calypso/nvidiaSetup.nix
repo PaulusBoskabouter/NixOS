@@ -13,5 +13,8 @@
 			nvidiaSettings = true;
 			package = config.boot.kernelPackages.nvidiaPackages.stable;
 		};
+        environment.sessionVariables = {
+            NIXOS_OZONE_WL = "1"; # tells Electron/Chromium-based apps to use native Wayland rendering
+        };
 	};
 }
