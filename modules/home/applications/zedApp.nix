@@ -9,6 +9,7 @@
                 "nightfox"
                 "catppuccin icons"
                 "Charmed Icons"
+                "Git Firefly"
 
             ];
 
