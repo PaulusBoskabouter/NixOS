@@ -5,10 +5,14 @@
 			inputs.plasma-manager.homeModules.plasma-manager
 			self.homeModules.plasmaConfig
 
+            # Wayland thingies
+            self.homeModules.waylandSetup # clipboard stuff
+
             # Actual applications
             self.homeModules.standardApps
 			self.homeModules.zedApp
 			self.homeModules.zenBrowser
+        
 
 
             # Terminal-related
