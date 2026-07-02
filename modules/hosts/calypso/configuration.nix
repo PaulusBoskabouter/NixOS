@@ -12,6 +12,13 @@
         # Enable networking
         networking.networkmanager.enable = true;
 
+
+        # Cuda toolkit things
+        nix.settings = {
+          substituters = [ "https://cache.nixos-cuda.org" ];
+          trusted-public-keys = [ "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M=" ];
+        };
+
         # Bluetooth things
         hardware.bluetooth = {
             enable = true;
