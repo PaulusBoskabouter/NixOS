@@ -43,9 +43,10 @@
 
         # Allow unfree packages
         nixpkgs.config = {
-            allowUnfree = true; # Stinky Nvidia
+            allowUnfree = true; 
             permittedInsecurePackages = [ "pnpm-10.29.2" ];
         };
+
 
         # Configure keymap in X11
         services.xserver.xkb = {
