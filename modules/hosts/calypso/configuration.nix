@@ -39,6 +39,13 @@
         # Enable the X11 windowing system.
         services.xserver.enable = true;
 
+        nix.settings.experimental-features = ["nix-command" "flakes"];
+
+        # Allow unfree packages
+        nixpkgs.config = {
+            allowUnfree = true; # Stinky Nvidia
+            permittedInsecurePackages = [ "pnpm-10.29.2" ];
+        };
 
         # Configure keymap in X11
         services.xserver.xkb = {
@@ -62,10 +69,6 @@
         services.libinput.enable = true;
 
 
-        nix.settings.experimental-features = ["nix-command" "flakes"];
-
-        # Allow unfree packages
-        nixpkgs.config.allowUnfree = true; # Stinky Nvidia
 
         # Enable the OpenSSH daemon to trusted devices only.
         services.openssh= {
