@@ -3,7 +3,7 @@
 		users.users."paul" = {
 			isNormalUser = true;
 			description = "Paul";
-			extraGroups = [ "networkmanager" "wheel" ];
+			extraGroups = [ "networkmanager" "wheel" "input" ];
 			hashedPasswordFile = config.age.secrets.passwdPaul.path;
 			shell = pkgs.zsh;
 		};
