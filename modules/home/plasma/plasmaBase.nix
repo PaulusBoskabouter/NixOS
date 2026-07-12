@@ -2,11 +2,14 @@
     flake.nixosModules.plasmaBase = { pkgs, ... }: {
         services.desktopManager.plasma6 = {
             enable = true;
-            excludePackages = with pkgs.kdePackages; [
+
+        };
+        services.flatpak.enable = true; # Temporarily(?) for some apps
+        environment.plasma6.excludePackages = with pkgs.kdePackages; [
                 konsole
                 kate
             ];
-        };
+
 
         services.displayManager.sddm = {
             enable = true;
