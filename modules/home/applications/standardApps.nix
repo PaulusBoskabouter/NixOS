@@ -5,6 +5,7 @@
 			pkgs.spotify
 			pkgs.discord
             pkgs.vlc
+            pkgs.kdePackages.kcalc
 		];
 	};
 }
