@@ -9,6 +9,7 @@
 			inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
 			bat
 			openssl
+            eduvpn-client
 		];
 	};
 

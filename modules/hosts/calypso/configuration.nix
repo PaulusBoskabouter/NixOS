@@ -10,7 +10,10 @@
         networking.hostName = "calypso"; # Define your hostname.
 
         # Enable networking
-        networking.networkmanager.enable = true;
+        networking.networkmanager = {
+            enable = true;
+            plugins = [ pkgs.networkmanager-openvpn ];
+        };
 
 
         # Cuda toolkit things
