@@ -9,7 +9,8 @@
 			inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
 			bat
 			openssl
-            eduvpn-client
+            eduvpn-client # Uni vpn
+            openconnect # Work vpn
 		];
 	};
 

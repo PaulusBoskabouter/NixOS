@@ -6,6 +6,7 @@
 			pkgs.discord
             pkgs.vlc
             pkgs.kdePackages.kcalc
+            pkgs.teams-for-linux
 		];
 	};
 }

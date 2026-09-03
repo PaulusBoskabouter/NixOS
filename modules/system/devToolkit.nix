@@ -6,6 +6,7 @@
 			pkgs.rustc
 			pkgs.cargo
 			pkgs.cudaPackages.cudatoolkit
+			pkgs.virtualbox
 		];
 
 		environment.variables.LD_LIBRARY_PATH = "${pkgs.lib.makeLibraryPath [
