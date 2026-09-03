@@ -1,7 +1,7 @@
 { self, inputs, ... }: {
     flake.nixosModules.calypsoConfiguration={ pkgs, lib, config, ...}: {
         imports = [ self.nixosModules.calypsoHardware ];
-        
+
 
         # Bootloader.
         boot.loader.systemd-boot.enable = true;
@@ -15,6 +15,8 @@
             plugins = [ pkgs.networkmanager-openvpn ];
         };
 
+        # Virtualbox
+        virtualisation.virtualbox.host.enable = true;
 
         # Cuda toolkit things
         nix.settings = {
@@ -53,7 +55,7 @@
 
         # Allow unfree packages
         nixpkgs.config = {
-            allowUnfree = true; 
+            allowUnfree = true;
             permittedInsecurePackages = [ "pnpm-10.29.2" ];
         };
 
@@ -95,7 +97,7 @@
         # networking.firewall.allowedTCPPorts = [ ... ];
         # networking.firewall.allowedUDPPorts = [ ... ];
 
-        system.stateVersion = "26.05"; 
+        system.stateVersion = "26.05";
 
     };
 

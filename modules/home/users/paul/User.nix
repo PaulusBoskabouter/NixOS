@@ -3,7 +3,7 @@
 		users.users."paul" = {
 			isNormalUser = true;
 			description = "Paul";
-			extraGroups = [ "networkmanager" "wheel" "input" ];
+			extraGroups = [ "networkmanager" "wheel" "input" "vboxusers" ];
 			hashedPasswordFile = config.age.secrets.passwdPaul.path;
 			shell = pkgs.zsh;
 		};
