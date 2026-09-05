@@ -3,8 +3,8 @@
 	flake.nixosConfigurations.mini = inputs.nixpkgs.lib.nixosSystem {
 		modules = [
 			# Machine-specific
-			self.nixosModules.calypsoConfiguration
-			self.nixosModules.calypsoSecrets
+			self.nixosModules.miniConfiguration
+			self.nixosModules.miniSecrets
 			self.nixosModules.nvidiaSetup
 
 			# Encryption using agenix
