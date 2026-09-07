@@ -22,6 +22,7 @@
         # We define aliases here
         home.shellAliases = {
             ssh = "kitty +kitten ssh";
+            f5vpn="/usr/local/bin/f5fpc -t https://ravpn.radboudumc.nl"
         };
 	};
 }
