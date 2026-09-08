@@ -15,10 +15,8 @@
             enable = true;
             wayland.enable = true;
         };
-        environment.systemPackages = [ 
+        environment.systemPackages = [
             pkgs.kdePackages.bluedevil # bluetooth stuff
             ];
     };
 }
-
-
