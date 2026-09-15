@@ -1,0 +1,28 @@
+{ self, inputs, ... }: {
+	flake.homeModules.zshSetup = { pkgs, ... }: {
+		programs.zsh = {
+			enable = true;
+
+			oh-my-zsh = {
+				enable = true;
+				theme = "agnoster";
+				plugins = [ "git" "sudo" ];
+			};
+
+			autosuggestion.enable = true;
+			syntaxHighlighting.enable = true;
+			enableCompletion = true;
+
+			history = {
+				size = 10000;
+				save = 10000;
+			};
+		};
+        
+        # We define aliases here
+        home.shellAliases = {
+            ssh = "kitty +kitten ssh";
+            f5vpn="/usr/local/bin/f5fpc -t https://ravpn.radboudumc.nl";
+        };
+	};
+}
