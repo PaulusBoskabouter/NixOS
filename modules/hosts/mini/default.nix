@@ -23,7 +23,6 @@
 			self.nixosModules.steamApp
 			self.nixosModules.tailscaleServer
 			self.nixosModules.devToolkit
-            self.nixosModules.f5cli # Work vpn
 
 		];
 	};
