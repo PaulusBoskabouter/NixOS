@@ -7,6 +7,7 @@
 			mayGarageTSKey.file = "${self}/secrets/mayGarageTSKey.age";
 			actualTSKey.file = "${self}/secrets/actualTSKey.age";
 			passwdRestic.file = "${self}/secrets/passwdRestic.age";
+            vaultwardenEnv.file = "${self}/secrets/vaultwardenKey.age";
 		};
 	};
 }

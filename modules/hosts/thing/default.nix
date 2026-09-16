@@ -23,6 +23,7 @@
 			self.nixosModules.mayGarageContainer
 			self.nixosModules.actualContainer
 			self.nixosModules.tailscaleServer
+			self.nixosModules.vaultwardenContainer
 
 			# Backup system
 			self.nixosModules.backupDisk

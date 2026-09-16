@@ -16,4 +16,5 @@ in {
 	"mayGarageTSKey.age".publicKeys  = [ calypsokey serverkey userkey];
 	"actualTSKey.age".publicKeys     = [ calypsokey serverkey userkey];
 	"passwdRestic.age".publicKeys    = [ calypsokey serverkey userkey];
+	"vaultwardenKey.age".publicKeys  = [ calypsokey serverkey userkey];
 }
