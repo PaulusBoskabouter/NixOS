@@ -45,7 +45,7 @@
 		virtualisation.oci-containers.containers."vaultwarden" = {
 			image = "docker.io/vaultwarden/server:latest";
 			volumes = [ "/var/lib/vaultwarden:/data" ];
-			environmentFiles = [ config.age.secrets.vaultwardenEnv.path ];
+			environmentFiles = [ config.age.secrets.vaultwardenAuth.path ];
 			environment = {
 				DOMAIN = "https://vault.bearded-altair.ts.net";
 				SIGNUPS_ALLOWED = "false";
