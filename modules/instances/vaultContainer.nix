@@ -28,12 +28,12 @@
 				TS_HOSTNAME = "vault";
 				TS_STATE_DIR = "/var/lib/tailscale";
 				TS_SERVE_CONFIG = "/config/serve.json";
-				TS_AUTHKEY = "file:/run/agenix/tailscaleKey";
+				TS_AUTHKEY = "file:/run/agenix/thingKey";
 			};
 			volumes = [
 				"/var/lib/tailscale-vaultwarden:/var/lib/tailscale"
 				"/etc/tailscale-vaultwarden:/config"
-				"/run/agenix/tailscaleKey:/run/agenix/tailscaleKey:ro"
+				"/run/agenix/thingKey:/run/agenix/thingKey:ro"
 			];
 			extraOptions = [
 				"--cap-add=NET_ADMIN"

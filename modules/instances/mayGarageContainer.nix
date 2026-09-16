@@ -25,12 +25,12 @@
 				TS_HOSTNAME = "garage";
 				TS_STATE_DIR = "/var/lib/tailscale";
 				TS_SERVE_CONFIG = "/config/serve.json";
-				TS_AUTHKEY = "file:/run/agenix/mayGarageTSKey";
+				TS_AUTHKEY = "file:/run/agenix/thingKey";
 			};
 			volumes = [
 				"/var/lib/tailscale-mayGarage:/var/lib/tailscale"
 				"/etc/tailscale-mayGarage:/config"
-				"/run/agenix/mayGarageTSKey:/run/agenix/mayGarageTSKey:ro"
+				"/run/agenix/thingKey:/run/agenix/thingKey:ro"
 			];
 			extraOptions = [
 				"--cap-add=NET_ADMIN"

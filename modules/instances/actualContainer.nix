@@ -28,12 +28,12 @@
 				TS_HOSTNAME = "budget";
 				TS_STATE_DIR = "/var/lib/tailscale";
 				TS_SERVE_CONFIG = "/config/serve.json";
-				TS_AUTHKEY = "file:/run/agenix/actualTSKey";
+				TS_AUTHKEY = "file:/run/agenix/thingKey";
 			};
 			volumes = [
 				"/var/lib/tailscale-actual:/var/lib/tailscale"
 				"/etc/tailscale-actual:/config"
-				"/run/agenix/actualTSKey:/run/agenix/actualTSKey:ro"
+				"/run/agenix/thingKey:/run/agenix/thingKey:ro"
 			];
 			extraOptions = [
 				"--cap-add=NET_ADMIN"
