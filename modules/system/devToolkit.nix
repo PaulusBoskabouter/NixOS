@@ -7,6 +7,7 @@
 			pkgs.cargo
 			pkgs.cudaPackages.cudatoolkit
 			pkgs.virtualbox
+            pkgs.typst
 		];
 		programs.nix-ld = {
 			enable = true;
