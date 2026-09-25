@@ -11,6 +11,7 @@
 			openssl
             eduvpn-client # Uni vpn
             openconnect # Work vpn
+            cifs-utils
 		];
 	};
 
