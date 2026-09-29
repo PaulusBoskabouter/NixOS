@@ -2,7 +2,7 @@
 	flake.nixosModules.basePackages = { pkgs, lib, ... }: {
 		environment.systemPackages = with pkgs; [
 			tree
-			btop
+			btop-cuda
 			vim
 			wget
 			# neovim
