@@ -7,6 +7,7 @@
             pkgs.vlc
             pkgs.kdePackages.kcalc
             pkgs.teams-for-linux
+            pkgs.libreoffice
 		];
 	};
 }
