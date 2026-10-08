@@ -7,9 +7,8 @@
   # Bootloader.
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "/dev/sda";
-  #boot.loader.grub.useOSProber = true;
-
-  networking.hostName = "thing"; # Define your hostname.
+  #hostName
+  networking.hostName = "thing";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Enable networking
@@ -34,29 +33,26 @@
     LC_TIME = "nl_NL.UTF-8";
   };
 
-
-   
-  nix.settings.experimental-features = ["nix-command" "flakes"];
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-	
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
+  # Docker
+  virtualisation.docker.enable = true;
 
   # Enable the OpenSSH daemon.
   services.openssh= {
   	enable = true;
-	settings = {
-		PasswordAuthentication = false;
-		PermitRootLogin = "no";
-		KbdInteractiveAuthentication = false;
-	};
-  };  
-  
+  	settings = {
+  		PasswordAuthentication = false;
+  		PermitRootLogin = "no";
+  		KbdInteractiveAuthentication = false;
+  	};
+  };
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
   networking.firewall.enable = true;
 
   # This value determines the NixOS release from which the default

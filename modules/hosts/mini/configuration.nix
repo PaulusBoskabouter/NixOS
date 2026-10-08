@@ -82,6 +82,8 @@
         services.libinput.enable = true;
 
 
+        # Docker
+        virtualisation.docker.enable = true;
 
         # Enable the OpenSSH daemon to trusted devices only.
         services.openssh= {

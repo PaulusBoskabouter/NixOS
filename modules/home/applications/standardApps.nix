@@ -8,6 +8,9 @@
             pkgs.kdePackages.kcalc
             pkgs.teams-for-linux
             pkgs.libreoffice
+            pkgs.obsidian
+            pkgs.localsend
+
 		];
 	};
 }
