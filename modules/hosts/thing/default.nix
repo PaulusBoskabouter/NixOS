@@ -24,6 +24,7 @@
 			self.nixosModules.actualContainer
 			self.nixosModules.tailscaleServer
 			self.nixosModules.vaultwardenContainer
+			self.nixosModules.pocketIdContainer
 
 			# Backup system
 			self.nixosModules.backupDisk

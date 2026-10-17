@@ -21,4 +21,5 @@ in {
 	"mayGarageConfig.age".publicKeys = [ adminkey thingkey ];
 	"passwdRestic.age".publicKeys    = [ adminkey thingkey ];
 	"vaultwardenAuth.age".publicKeys = [ adminkey thingkey ];
+	"pocketidEnv.age".publicKeys     = [ adminkey thingkey ];
 }
