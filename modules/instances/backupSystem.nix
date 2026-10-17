@@ -17,7 +17,8 @@
 				${pkgs.restic}/bin/restic backup \
 					/var/lib/actual/actual-data \
 					/var/lib/may/data \
-                    /var/lib/vaultwarden
+                    /var/lib/vaultwarden \
+                    /var/lib/pocket-id
 				${pkgs.restic}/bin/restic forget \
 					--keep-daily 7 \
 					--keep-weekly 8 \
