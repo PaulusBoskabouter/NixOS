@@ -27,5 +27,5 @@ in {
 
     # Cloudflare
     "pocketidTunnel.age".publicKeys   = [ adminkey thingkey ];
-
+    "vaultTunnel.age".publicKeys   = [ adminkey thingkey ];
 }
