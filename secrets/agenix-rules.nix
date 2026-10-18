@@ -22,10 +22,11 @@ in {
 	"passwdRestic.age".publicKeys    = [ adminkey thingkey ];
 	"vaultwardenAuth.age".publicKeys = [ adminkey thingkey ];
 	"pocketidEnv.age".publicKeys     = [ adminkey thingkey ];
-	"actualAuth.age".publicKeys     = [ adminkey thingkey ];
+	"actualAuth.age".publicKeys      = [ adminkey thingkey ];
 
 
     # Cloudflare
-    "pocketidTunnel.age".publicKeys   = [ adminkey thingkey ];
-    "vaultTunnel.age".publicKeys   = [ adminkey thingkey ];
+    "pocketidTunnel.age".publicKeys  = [ adminkey thingkey ];
+    "vaultTunnel.age".publicKeys     = [ adminkey thingkey ];
+    "actualTunnel.age".publicKeys    = [ adminkey thingkey ];
 }

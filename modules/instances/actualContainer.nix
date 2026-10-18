@@ -7,60 +7,32 @@
 		];
 		virtualisation.oci-containers.backend = "docker";
 
-		systemd.services.actual-serve-config = {
-			description = "Write tailscale serve config for Actual";
-			wantedBy = [ "multi-user.target" ];
-			before = [ "docker-tailscale-actual.service" ];
-			serviceConfig.Type = "oneshot";
-			script = ''
-				mkdir -p /etc/tailscale-actual
-				echo '${builtins.toJSON {
-					TCP."443" = { HTTPS = true; };
-					Web."budget.bearded-altair.ts.net:443".Handlers."/" = {
-						Proxy = "http://127.0.0.1:5006";
-					};
-				}}' > /etc/tailscale-actual/serve.json
-			'';
-		};
-		virtualisation.oci-containers.containers."tailscale-actual" = {
-			image = "docker.io/tailscale/tailscale:latest";
+        virtualisation.oci-containers.containers."actualinstance" = {
+            image = "docker.io/actualbudget/actual-server:latest";
+            volumes = ["/var/lib/actual/actual-data:/data"];
             environmentFiles = [ config.age.secrets.actualAuth.path ];
             environment = {
+                ACTUAL_OPENID_ENFORCE = "true";
                 ACTUAL_OPENID_DISCOVERY_URL = "https://authenticate.binarystar.dev/.well-known/openid-configuration";
-                ACTUAL_OPENID_SERVER_HOSTNAME = "https://budget.bearded-altair.ts.net";
+                ACTUAL_OPENID_SERVER_HOSTNAME = "https://budget.binarystar.dev";
             };
-			environment = {
-				TS_HOSTNAME = "budget";
-				TS_STATE_DIR = "/var/lib/tailscale";
-				TS_SERVE_CONFIG = "/config/serve.json";
-				TS_AUTHKEY = "file:/run/agenix/thingKey";
-			};
-			volumes = [
-				"/var/lib/tailscale-actual:/var/lib/tailscale"
-				"/etc/tailscale-actual:/config"
-				"/run/agenix/thingKey:/run/agenix/thingKey:ro"
-			];
-			extraOptions = [
-				"--cap-add=NET_ADMIN"
-				"--device=/dev/net/tun"
-			];
-			autoStart = true;
-		};
+            extraOptions = [
+                "--health-cmd=node scripts/health-check.js"
+                "--health-interval=60s"
+                "--health-timeout=10s"
+                "--health-retries=3"
+                "--health-start-period=20s"
+            ];
+            autoStart = true;
+        };
 
-		virtualisation.oci-containers.containers."actualtestinstance" = {
-			image = "docker.io/actualbudget/actual-server:latest";
-			volumes = ["/var/lib/actual/actual-data:/data"];
-			extraOptions = [
-				"--health-cmd=node scripts/health-check.js"
-				"--health-interval=60s"
-				"--health-timeout=10s"
-				"--health-retries=3"
-				"--health-start-period=20s"
-				"--network=container:tailscale-actual"
-			];
-			autoStart = true;
-			environment = {};
-			dependsOn = [ "tailscale-actual" ];
-		};
-	};
+        virtualisation.oci-containers.containers."actual_cf" = {
+            image = "docker.io/cloudflare/cloudflared:latest";
+            cmd = [ "tunnel" "--no-autoupdate" "run" ];
+            environmentFiles = [ config.age.secrets.actualBudgetTunnel.path ];
+            extraOptions = [ "--network=container:actualinstance" ];
+            autoStart = true;
+            dependsOn = [ "actualinstance" ];
+        };
+        };
 }
