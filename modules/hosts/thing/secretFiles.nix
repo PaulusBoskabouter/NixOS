@@ -15,6 +15,7 @@
 			mayGarageConfig.file = "${self}/secrets/mayGarageConfig.age";
 			passwdRestic.file = "${self}/secrets/passwdRestic.age";
             vaultwardenAuth.file = "${self}/secrets/vaultwardenAuth.age";
+            actualAuth.file = "${self}/secrets/actualAuth.age";
 		};
 	};
 }

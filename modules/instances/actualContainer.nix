@@ -24,6 +24,11 @@
 		};
 		virtualisation.oci-containers.containers."tailscale-actual" = {
 			image = "docker.io/tailscale/tailscale:latest";
+            environmentFiles = [ config.age.secrets.actualAuth.path ];
+            environment = {
+                ACTUAL_OPENID_DISCOVERY_URL = "https://authenticate.binarystar.dev/.well-known/openid-configuration";
+                ACTUAL_OPENID_SERVER_HOSTNAME = "https://budget.bearded-altair.ts.net";
+            };
 			environment = {
 				TS_HOSTNAME = "budget";
 				TS_STATE_DIR = "/var/lib/tailscale";
