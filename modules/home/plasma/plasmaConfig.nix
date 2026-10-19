@@ -60,7 +60,7 @@
               kwin."Switch Window Up" = "Meta+Alt+Up";
               kwin."Switch to Desktop -1" = "Meta+F1";
               kwin."Switch to Desktop 0" = "Meta+F2";
-              kwin."Switch to Desktop 1" = "Ctrl+F1";
+              kwin."Switch to Desktop 1" = "Ctrl+1";
               kwin."Switch to Desktop 10" = [ ];
               kwin."Switch to Desktop 11" = [ ];
               kwin."Switch to Desktop 12" = [ ];
@@ -71,15 +71,15 @@
               kwin."Switch to Desktop 17" = [ ];
               kwin."Switch to Desktop 18" = [ ];
               kwin."Switch to Desktop 19" = [ ];
-              kwin."Switch to Desktop 2" = "Ctrl+F2";
+              kwin."Switch to Desktop 2" = "Ctrl+2";
               kwin."Switch to Desktop 20" = [ ];
               kwin."Switch to Desktop 21" = [ ];
               kwin."Switch to Desktop 22" = [ ];
               kwin."Switch to Desktop 23" = [ ];
               kwin."Switch to Desktop 24" = [ ];
               kwin."Switch to Desktop 25" = [ ];
-              kwin."Switch to Desktop 3" = "Ctrl+F3";
-              kwin."Switch to Desktop 4" = "Ctrl+F4";
+              kwin."Switch to Desktop 3" = "Ctrl+3";
+              kwin."Switch to Desktop 4" = "Ctrl+4";
               kwin."Switch to Desktop 5" = [ ];
               kwin."Switch to Desktop 6" = [ ];
               kwin."Switch to Desktop 7" = [ ];
