@@ -10,6 +10,7 @@
             pocketidTunnel.file = "${self}/secrets/pocketidTunnel.age";
             vaultwardenTunnel.file = "${self}/secrets/vaultTunnel.age";
             actualBudgetTunnel.file = "${self}/secrets/actualTunnel.age";
+			tailscaleKey.file = "${self}/secrets/thingKey.age";
 
 
             # Container settings

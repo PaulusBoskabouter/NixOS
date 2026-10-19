@@ -21,7 +21,7 @@
 				if [ "$status" = "Running" ]; then
 					exit 0
 				fi
-				${pkgs.tailscale}/bin/tailscale up --authkey=$(cat ${config.age.secrets.thingKey.path})
+				${pkgs.tailscale}/bin/tailscale up --authkey=$(cat ${config.age.secrets.tailscaleKey.path})
 			'';
 		};
 

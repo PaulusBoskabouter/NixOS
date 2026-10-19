@@ -18,5 +18,7 @@
         environment.systemPackages = [
             pkgs.kdePackages.bluedevil # bluetooth stuff
             ];
+
+        xdg.mime.defaultApplications."application/pdf" = [ "zen.desktop" ];
     };
 }
