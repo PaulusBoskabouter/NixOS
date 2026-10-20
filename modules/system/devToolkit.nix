@@ -7,8 +7,9 @@
 			pkgs.cargo
 			pkgs.cudaPackages.cudatoolkit
 			pkgs.virtualbox
-      pkgs.typst
-      pkgs.docker
+            pkgs.typst
+            pkgs.docker
+            pkgs.android-tools
 		];
 		programs.nix-ld = {
 			enable = true;
