@@ -30,7 +30,11 @@
             image = "docker.io/cloudflare/cloudflared:latest";
             cmd = [ "tunnel" "--no-autoupdate" "run" ];
             environmentFiles = [ config.age.secrets.actualBudgetTunnel.path ];
-            extraOptions = [ "--network=container:actualinstance" ];
+            extraOptions = [ 
+                "--network=container:actualinstance" 
+                "--pull=always"
+            ];
+
             autoStart = true;
             dependsOn = [ "actualinstance" ];
         };

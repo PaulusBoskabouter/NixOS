@@ -21,7 +21,10 @@
 			image = "docker.io/cloudflare/cloudflared:latest";
 			cmd = [ "tunnel" "--no-autoupdate" "run" ];
 			environmentFiles = [ config.age.secrets.pocketidTunnel.path ];
-			extraOptions = [ "--network=container:pocket-id" ];
+			extraOptions = [ 
+                "--network=container:pocket-id" 
+                "--pull=always"
+            ];
 			autoStart = true;
 			dependsOn = [ "pocket-id" ];
 		};

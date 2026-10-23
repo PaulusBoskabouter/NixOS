@@ -23,7 +23,10 @@
 			image = "docker.io/cloudflare/cloudflared:latest";
 			cmd = [ "tunnel" "--no-autoupdate" "run" ];
 			environmentFiles = [ config.age.secrets.vaultwardenTunnel.path ];
-			extraOptions = [ "--network=container:vaultwarden" ];
+			extraOptions = [ 
+                "--network=container:vaultwarden"
+                "--pull=always"
+            ];
 			autoStart = true;
 			dependsOn = [ "vaultwarden" ];
 		};
